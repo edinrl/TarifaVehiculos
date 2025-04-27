@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Parking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestión de Parking</h1>
+
+    <div class="container">
+        <section id="seccion-tarifas">
+            <h2>Tarifas</h2>
+            <form id="form-tarifa">
+                <h3>Agregar Nueva Tarifa</h3>
+                <div>
+                    <label for="descripcion-tarifa">Descripción:</label>
+                    <input type="text" id="descripcion-tarifa" required>
+                </div>
+                <div>
+                    <label for="costo-tarifa">Costo (S/.):</label>
+                    <input type="number" id="costo-tarifa" step="0.01" min="0" required>
+                </div>
+                <button type="submit">Agregar Tarifa</button>
+            </form>
+
+            <h3>Lista de Tarifas</h3>
+            <table id="tabla-tarifas">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripción</th>
+                        <th>Costo (S/.)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+
+        <section id="seccion-registros">
+            <h2>Registros Vehiculares</h2>
+            <form id="form-registro">
+                <h3>Registrar Nuevo Vehículo</h3>
+                <div>
+                    <label for="vehiculo-registro">Vehículo (Placa):</label>
+                    <input type="text" id="vehiculo-registro" required>
+                </div>
+                <div>
+                    <label for="horas-registro">Horas Parqueo:</label>
+                    <input type="number" id="horas-registro" min="1" required>
+                </div>
+                 <div>
+                    <label for="costo-total-registro">Costo Total (S/.):</label>
+                    <input type="number" id="costo-total-registro" step="0.01" min="0" required>
+                </div>
+                <div>
+                    <label for="tarifa-registro">Seleccionar Tarifa:</label>
+                    <select id="tarifa-registro" required>
+                        <option value="">-- Seleccione una tarifa --</option>
+                        </select>
+                </div>
+                <button type="submit">Registrar Vehículo</button>
+            </form>
+
+            <h3>Historial de Registros</h3>
+            <table id="tabla-registros">
+                <thead>
+                    <tr>
+                        <th>ID Registro</th>
+                        <th>Vehículo</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Horas</th>
+                        <th>Costo Total (S/.)</th>
+                        <th>ID Tarifa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
